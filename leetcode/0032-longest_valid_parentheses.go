@@ -24,7 +24,7 @@ func longestValidParentheses(s string) int {
 
 			// if the predecessor is also a rparen, try to find its lparen
 			lparenIndex := i - dp[i-1] - 1
-			if lparenIndex >= 0 && s[i-dp[i-1]-1] == lparen {
+			if lparenIndex >= 0 && s[lparenIndex] == lparen {
 				// suppose this is the end of the valid substring, add the
 				// cumulative length of any _previous_ adjacent substring
 				// which should be just one index _before_ our current one:
