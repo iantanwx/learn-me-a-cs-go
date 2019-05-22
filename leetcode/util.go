@@ -111,6 +111,17 @@ func NewPriorityQueue() PriorityQueue {
 	return pq
 }
 
+func max(nums ...int) int {
+	highest := math.MinInt64
+	for _, n := range nums {
+		if n > highest {
+			highest = n
+		}
+	}
+
+	return highest
+}
+
 func min(nums ...int) int {
 	lowest := math.MaxInt64
 	for _, n := range nums {
